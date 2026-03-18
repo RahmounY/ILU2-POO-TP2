@@ -27,7 +27,9 @@ public class BoundaryEmmenager {
 					break;
 
 				case 2:
-					//TODO a completer
+				
+				    emmenagerGaulois(nomVisiteur);
+				    
 					break;
 
 				default:
@@ -40,6 +42,21 @@ public class BoundaryEmmenager {
 	}
 
 	private void emmenagerDruide(String nomVisiteur) {
-		//TODO a completer
+		int force = 5;
+	    int effetMin = 1;
+	    int effetMax = 10;
+
+	    controlEmmenager.ajouterDruide(nomVisiteur, force, effetMin, effetMax);
+
+	    System.out.println("Bienvenue Druide " + nomVisiteur);
+	}
+	
+	private void emmenagerGaulois(String nomVisiteur) {
+		 int force = 10; 
+
+		 controlEmmenager.ajouterGaulois(nomVisiteur, force);
+
+		 System.out.println("Bienvenue Gaulois " + nomVisiteur);
+	
 	}
 }
